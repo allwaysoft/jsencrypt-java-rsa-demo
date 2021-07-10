@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Demo</title>
+<meta charset="utf-8" />
+
+<script src="jsencrypt.min.js"></script>
+
+<script>
+    let password="password"
+    let publicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCglgL/ncBTGt4FKvsYVCQ0XHyapon1w+d8Aw78svb0ygxixLGUEuzIXDVx385/f7Ev68cJm0C7nCRlA5ubLoWK3FFrsRtU/NBe0EOsqZ8qqXcYeMStjavRZVtmsjjuG6pOBO/VoBRzv+Vpvr0/mI7cUBzJKLRSb9HKEoYKtMkdxQIDAQAB";
+    let RSAEncrypt = new JSEncrypt();
+    RSAEncrypt.setPublicKey(publicKey);
+    let encryptedPass = RSAEncrypt.encrypt(password);
+    alert(encryptedPass);
+    document.write(encryptedPass);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
